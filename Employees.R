@@ -23,4 +23,3 @@ data_education <- bd %>%
 
 # Confidence interval for the proportion of employees with higher education
 prop.test(length(data_education),length(bd$escolaridade))
-
