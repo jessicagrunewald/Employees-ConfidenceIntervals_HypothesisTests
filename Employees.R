@@ -22,4 +22,4 @@ data_education <- bd %>%
   filter(escolaridade %in% c("superior completo","pós-graduação"))
 
 # Confidence interval for the proportion of employees with higher education
-prop.test(length(data_education),length(bd$escolaridade))
+prop.test(length(data_education$escolaridade),length(bd$escolaridade))
