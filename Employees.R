@@ -16,3 +16,11 @@ ic_last_salary <- t.test(bd$valor.do.último.salário)
 ic_length_experience <- t.test(bd$tempo.de.experiência.profissional)
 ic_experience_role <- t.test(bd$tempo.de.experiência.na.função)
 
+# Filter and save in the data_education variable
+# Only employees with a Higher Education or Postgraduate degree.
+data_education <- bd %>%
+  filter(escolaridade %in% c("superior completo","pós-graduação"))
+
+# Confidence interval for the proportion of employees with higher education
+prop.test(length(data_education),length(bd$escolaridade))
+
